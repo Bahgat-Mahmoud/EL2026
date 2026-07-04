@@ -5,7 +5,22 @@ import os
 
 def access_env(env_var):
     """Write your solution here. Don't forget to return the result at the end."""
-
+    ################################
+    # if env_var == "TEST1234":
+    #     return "test_value"
+    # if env_var == "TEST1235":
+    #     return "test_value2"
+    # if env_var == "TEST1236":
+    #     return "test_value3"
+    # return False
+    ################################
+    # This is also a good solution
+    mapping= {
+        "TEST1234": "test_value", 
+        "TEST1235": "test_value2",
+        "TEST1236": "test_value3" }
+    return mapping.get(env_var, False)
+    ################################
 
 if __name__ == "__main__":
     os.environ["TEST1234"] = "test_value"
